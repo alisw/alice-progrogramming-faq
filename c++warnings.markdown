@@ -20,6 +20,13 @@ you need to delete it with:
 
     delete[] a;
 
+Otherwise this will result in a memory leak.
+
+While by default this practice is considered a warning by the compiler,
+due to the fact the standard actually allows it, this is never the
+correct thing to do. For this reason, starting from 23/5/2016 AliPhysics
+will treat this as an error.
+
 See also:
 
 - <http://en.cppreference.com/w/cpp/memory/new/operator_new>

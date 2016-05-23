@@ -1,9 +1,9 @@
 highlighter: rouge
 baseurl: /alice-programming-faq
-menu_header: ALICE
+menu_header: DEV NOTES
 menu:
   - name: c++warnings.html
-    label: WARNINGS
+    label: C++ WARNINGS
 defaults:
   -
     scope:
