@@ -1,0 +1,14 @@
+highlighter: rouge
+baseurl: /alice-programming-faq
+menu_header: ALICE
+menu:
+  - name: c++warnings.html
+    label: WARNINGS
+defaults:
+  -
+    scope:
+      path: "basic/"
+      type: "posts"
+    values:
+      category: "basic"
+      layout: "main"
