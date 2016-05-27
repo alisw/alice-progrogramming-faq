@@ -31,3 +31,25 @@ See also:
 
 - <http://en.cppreference.com/w/cpp/memory/new/operator_new>
 - <http://en.cppreference.com/w/cpp/memory/new/operator_delete>
+
+## error: delete called on 'BaseClass' that has virtual functions but non-virtual destructor [-Werror,-Wdelete-non-virtual-dtor]
+
+Whenever a C++ class has virtual methods and it's therefore meant to
+be used polymorphically, it's good practice to make sure to provide a
+virtual destructor:
+
+```c++
+class BaseClass {
+public:
+  virtual ~BaseClass() { ... }
+};
+```
+
+This is because otherwise you will encounter an undefined behavior
+whenever you try to delete a derived class through a pointer to the
+baseclass. This also applies to any class which uses the ROOT
+`ClassDef()` macro as it expands by adding virtual methods.
+
+See also:
+
+- http://www.gotw.ca/publications/mill18.htm
