@@ -7,7 +7,7 @@ layout: main
 This is an incomplete list of warnings which have happened in AliPhysics
 and how to clean them up.
 
-### 'delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'?
+### ['delete' applied to a pointer that was allocated with 'new[]'; did you mean 'delete[]'?](#mismatched-new-delete)
 
 Not everyone remembers that in C++ there is a special operator to delete arrays
 allocated with new, `delete[]`.
@@ -32,7 +32,7 @@ See also:
 - <http://en.cppreference.com/w/cpp/memory/new/operator_new>
 - <http://en.cppreference.com/w/cpp/memory/new/operator_delete>
 
-### error: delete called on 'BaseClass' that has virtual functions but non-virtual destructor [-Werror,-Wdelete-non-virtual-dtor]
+### [Delete called on 'BaseClass' that has virtual functions but non-virtual destructor `[-Werror,-Wdelete-non-virtual-dtor]`](#delete-non-virtual-dtor)
 
 Whenever a C++ class has virtual methods and it's therefore meant to
 be used polymorphically, it's good practice to make sure to provide a
